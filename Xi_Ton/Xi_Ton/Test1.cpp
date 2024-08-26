@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
-	cout << "GitHub²âÊÔ" << endl;
+	cout << "GitHub" << endl;
+	cout << "GitHubÐÞ¸Ä²âÊÔ" << endl;
 	return;
 }
