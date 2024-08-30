@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\29292\\Desktop\\Game\\Xi_Ton\\vim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51FB417D-1CE7-4493-9D48-8459721EF45D}|vim\\vim.vcxproj|C:\\Users\\29292\\Desktop\\Game\\Xi_Ton\\vim\\vim\\shell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{51FB417D-1CE7-4493-9D48-8459721EF45D}|vim\\vim.vcxproj|solutionrelative:vim\\shell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "shell.cpp",
+              "DocumentMoniker": "C:\\Users\\29292\\Desktop\\Game\\Xi_Ton\\vim\\vim\\shell.cpp",
+              "RelativeDocumentMoniker": "vim\\shell.cpp",
+              "ToolTip": "C:\\Users\\29292\\Desktop\\Game\\Xi_Ton\\vim\\vim\\shell.cpp",
+              "RelativeToolTip": "vim\\shell.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-30T03:30:21.917Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

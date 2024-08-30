@@ -1,0 +1,92 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\begin{document}
+\title{\textbf{系统开发工具基础第二周实验报告}}
+\author{袁庆康 23020007154 \\Git:https://github.com/kangya87/Xi\_Ton}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{\large Shell的练习内容、结果、感悟}
+\subsection{\small Shell文件的定位和浏览}
+
+\includegraphics[width=12cm, height=6cm]{Pict1}
+
+利用cd+文件名(该文件夹下的)，可以使定位移动到该文件；cd+..将定位移动到上一文件。
+
+输入ls 可以浏览当前文件中的所有文件。
+\subsection{\small 创建浏览文件}
+\includegraphics[width=12cm, height=2.5cm]{Pict2}
+
+输入\textbf{echo 任意语句} \textgreater \textbf{文件名.文件格式} 可以在当前定位下创建该文件并输入该语句。
+
+输入\textbf{cat 文件名.文件格式} 可以打印输出该文件的内容。
+输入\textbf{cat 文件名.文件格式} \textgreater \textbf{文件名1.文件格式} 可以将文件中的内容传到文件1中。
+\subsection{\small 打开文件编译模式(重加载)}
+\includegraphics[width=12cm, height=2.7cm]{Pict3}
+
+创建文件后输入\textbf{cat>test.txt(例)}可以清空该文件，并且写入内容。
+\subsection{\small 打开文件编译模式(后缀)}
+\includegraphics[width=12cm, height=5cm]{Pict4}
+
+创建文件后输入\textbf{cat>test.txt(例)}可以在原先文件的基础上写入新的内容
+\subsection{\small 创建文件夹}
+\includegraphics[width=12cm, height=0.7cm]{Pict5}
+
+输入\textbf{mkdir+文件名}可以在当前定位下创建文件夹。
+\subsection{\small 文件权限查询}
+\includegraphics[width=12cm, height=2cm]{Pict6}
+
+\textbf{ls -l}可以显示当前定位下文件内容，修改事件拥有者和管理权限等内容。  
+
+\subsection{\small 文件权限修改}
+\includegraphics[width=12cm, height=2cm]{Pict7}
+
+输入\textbf{chmod 777(最高权限) 文件}可以修改权限
+7-rwx 6-rw 5-rx 4-r 3-wx 2-w 1-x 0-无
+三位数分别是属主、属组、其它用户 
+\subsection{\small bash文件的创建}
+\includegraphics[width=12cm, height=2.2cm]{Pict8}
+
+bash文件的后缀是sh如,\textbf{test.sh}
+\subsection{\small bash中连接运算符的规律}
+\includegraphics[width=12cm, height=5cm]{Pict9}
+
+bash中连接运算符和c、c++中一样，\textbackslash \textbackslash 为或，\&\&为与.
+\subsection{\small bash文件的运行}
+\includegraphics[width=12cm, height=3cm]{Pict10}
+
+输入\textbf{bash -v test.sh}可以运行并打印该文件运行结果.
+\subsection{\small 感悟}
+Shell相当于是一个翻译，把我们在计算机上的操作或我们的命令，翻译为计算机可识别的二进制命令，传递给内核，以便调用计算机硬件执行相关的操作；同时，计算机执行完命令后，再通过Shell翻译成自然语言，呈现在我们面前。
+\section{\large vim的练习、结果、感悟}
+\subsection{\small vim环境的调试}
+\includegraphics[width=12cm, height=6cm]{Pict11}
+
+在终端中输入wsl可以使编译器模拟Linux虚拟机环境，在此环境可以用vim编译
+\subsection{\small vim编译器的打开}
+\includegraphics[width=12cm, height=6cm]{Pict12}
+
+输入vim便可以进入vim编译模式
+\subsection{\small vim编译模式的改变}
+\includegraphics[width=12cm, height=6cm]{Pict13}
+
+点击i键可以进入vim插入模式；r进入替换模式；v进入一般化模式；按下<ESC>退回正常模式.
+\subsection{\small vim保存内容到文件}
+\includegraphics[width=12cm, height=6cm]{Pict14}
+
+Esc返还正常模式后,\textbf{输入:w 文件名},将内容保存到该文件
+\subsection{\small vim读取文件内容}
+\includegraphics[width=12cm, height=6cm]{Pict15}
+
+输入\textbf{:e 文件名}读取并打印该文件.
+\subsection{\small 感悟}
+Vim 是一个 多模态 编辑 器：它对于插入文字和操纵文字有不同的模式。Vim 是可编程的（可以使用 Vimscript 或者像Python一样的其他程序语言），Vim 的接口本身也是一个程序语言：键入操作（以及其助记名） 是命令，这些命令也是可组合的。
+\end{document}
