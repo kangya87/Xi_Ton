@@ -1,0 +1,112 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\begin{document}
+\title{\textbf{系统开发工具基础第三周实验报告}}
+\author{袁庆康 23020007154 \\Git:https://github.com/kangya87/Xi\_Ton}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{\large Python的练习内容、结果、感悟}
+\subsection{\small Python的输入、输出}
+
+\includegraphics[width=12cm, height=3.5cm]{Pict1}
+
+python的输入是\textbf{input("提示内容")}
+
+输出是\textbf{print()}
+\subsection{\small 字符串切片}
+
+\includegraphics[width=12cm, height=2cm]{Pict2}
+
+python中的字符串有类似c++中的string功能，python的string相比c++有更多丰富的功能，比如切片功能。
+
+
+\subsection{\small for、while用法}
+
+\includegraphics[width=12cm, height=5cm]{Pict3}
+
+除了细微的语法区别，python中的for和while有着和c++基本相同的功能.
+\subsection{\small 函数的用法}
+
+\includegraphics[width=12cm, height=4cm]{Pict4}
+
+python中函数的构建统一用def做注释，并且可以不给参数定义类型。
+\subsection{\small 列表的用法}
+
+\includegraphics[width=12cm, height=4cm]{Pict5}
+
+python中列表的代表是list,使用\textbf{lst=list("字符串")},可以将字符串分割存储到lst中。
+\subsection{\small 元组的用法}
+\includegraphics[width=12cm, height=4cm]{Pict6}
+
+元组在python中的代表是tuple，使用\textbf{t=tuple("字符串")},可以将字符串分割存储到t中。与列表不同是，元组中的元素是不可以修改的。
+
+\subsection{\small 感悟}
+
+python是一个及其方便且功能强大的语言，不同于c++python将程序员从繁杂的代码中解救出来，更加快速制作繁杂庞大的项目。
+
+但是python也有其弱项，因其庞大的库，它会使代码运行速度变得更加缓慢。
+\section{\large Python视觉的练习、结果、感悟}
+\subsection{\small PIL图片的打印}
+\includegraphics[width=12cm, height=8cm]{Pic7}
+
+使用\textbf{pil=Image.open("图片名")}可以打开该图片并存储到pil中，然后用\textbf{pil}打印该图片
+\subsection{\small PIL的图片的存储}
+\includegraphics[width=12cm, height=0.9cm]{Pict8}
+
+\includegraphics[width=12cm, height=0.5cm]{Pict9}
+
+使用\textbf{pil.save("新的图片名")}可以将新的图片存储到python的主文件夹里。
+\subsection{\small PIL对图片的操作}
+\includegraphics[width=12cm, height=8cm]{Pict10}
+
+使用\textbf{pil.transpose(Imagge.FLIP\_LEFT\_RIGHT)}可以使图片发生镜面倒转，使用\textbf{pil.rotate(角度)}可以使图片发生该角度的转发。
+\subsection{\small PIL画点画线}
+\includegraphics[width=12cm, height=6cm]{Pict11}
+
+用x,y来确定点的位置，然后使用\textbf{plot(x,y,"go-")}可以使用绿色线连接x和y的位置，同时使用\textbf{title("内容")}可以为图片打印标题。
+\subsection{\small PIL切割图片}
+\includegraphics[width=12cm, height=3.5cm]{Pict12}
+
+使用\textbf{box(lx,uy,rx,dy)}可以确定由lx到rx，uy到dy的方形区域，然后使用\textbf{pil.crop(box)}可切割box确定区域的图片。
+\subsection{\small PIL图片互动功能}
+\includegraphics[width=12cm, height=6cm]{Pict14}
+
+可以使用\textbf{ginput(3)}获取三次点击图片获取的位置信息，然后将位置信息存储后用plot函数进行画点、画图操作。
+\subsection{\small PIL获取图片数组}
+\includegraphics[width=12cm, height=3cm]{Pict13}
+
+使用\textbf{im=array("图片名")}可以使im获取该图片的特定数组。
+\subsection{\small PIL图片灰值的调整}
+\includegraphics[width=12cm, height=8cm]{Pict15}
+
+使用\textbf{array}获取图片数组后，对数组进行算法调控，来调整图片的灰值。
+\subsection{\small PIL获取图像轮廓和直方图}
+\includegraphics[width=12cm, height=9cm]{Pict16}
+
+对获取的图像数组使用\textbf{hist(im.flatten(),128)}可以获取图片的直方图。
+\subsection{\small 直方图均衡化}
+\includegraphics[width=12cm, height=9cm]{Pict17}
+
+可以使用图中hitteq算法对图片中色块出现频率和分布进行均衡化，然后打印出分别度更高的图片。
+\subsection{\small 图像导数}
+\includegraphics[width=12cm, height=6cm]{Pict18}
+
+使用 scipy.ndimage.filters 模块的标准卷积操作来简单地实现。
+\subsection{\small 模糊处理}
+\includegraphics[width=12cm, height=8cm]{Pict19}
+
+使用\textbf{gaussian\_filter(im,5)}可以对图像数组进行模糊化处理，再使用\textbf{Image.fromarray(im)}对数组进行反译,形成新的图像。
+\subsection{\small 感悟}
+本书中，使用广义的计算机视觉概念，包括图像扭曲、降噪和增强现实等。
+
+计算机视觉是一门对图像中信息进行自动提取的学科。信息的内容相当广泛，包括三维模型、照相机位置、目标检测与识别，以及图像内容的分组与搜索等。
+\end{document}
