@@ -1,0 +1,131 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\begin{document}
+\title{\textbf{系统开发工具基础第四周实验报告}}
+\author{袁庆康 23020007154 \\Git:https://github.com/kangya87/Xi\_Ton}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{\large 调试及性能分析的练习内容、结果、感悟}
+\subsection{\small 终端打印颜色}
+
+\includegraphics[width=12cm, height=8cm]{Pict (1)}
+
+利用bash文件打印多种颜色，便于代码的区分以此增强代码的可读性。
+
+\subsection{\small 第三方日志系统}
+
+\includegraphics[width=12cm, height=0.5cm]{Pict (2)}
+
+使用logger程序打印系统日志
+
+
+\subsection{\small python引入调试器}
+
+\includegraphics[width=12cm, height=5cm]{Pict (3)}
+
+使用\textbf{import pdb}引入调试器库，再在代码中加入\textbf{pdb.set-trace()}以实现代码的终止方便调试。
+
+\subsection{\small python调试显示变量}
+
+\includegraphics[width=12cm, height=6cm]{Pict (4)}
+
+运行python代码后，层序会在设置的断点后终止，此时输入\textbf{p+x(变量名)}便可以查询该变量的数据.
+
+\subsection{\small python调试设置断点和下一步}
+
+\includegraphics[width=12cm, height=7cm]{Pict (5)}
+
+程序在断点处停止后输入\textbf{break+l(行数)}就可以在该行设置一个新的断点，此时输入\textbf{continue或者c}就可以使代码继续运行，直到遇到下一个断点。
+
+\subsection{\small python静态分析工具的下载}
+\includegraphics[width=12cm, height=4.5cm]{Pict (6)}
+
+在终端使用\textbf{pip install pyflakes}或者\textbf{mypy}就可以为python下载这两个静态分析工具。
+
+\subsection{\small python静态工具的使用}
+
+\includegraphics[width=12cm, height=2.5cm]{Pict (7)}
+
+对需要分析的代码输入\textbf{pyflakes 文件名}或者\textbf{mypy 文件名}就可以在不需要代码运行的情况下发现bug。
+
+\subsection{\small python性能分析-计时}
+
+\includegraphics[width=12cm, height=1cm]{Pict (8)}
+
+首先需要用\textbf{import time}引入time库,然后使用\textbf{start= time.time}使start存储当前的time时间,在执行操作后使用\textbf{print(time.time()-start())}打印出该系统运行的时间。
+
+\subsection{\small python性能分析-CPU}
+\includegraphics[width=12cm, height=7cm]{Pict (9)}
+
+使用\textbf{cProfile}模块来分析每次函数调用所消耗的时间，可以用这个来分析代码中需要性能最多的部分，以此方便对代码进行修改和优化。
+
+\subsection{\small python性能分析-内存}
+\includegraphics[width=12cm, height=4cm]{Pict (10)}
+
+使用\textbf{python -m memory-profile 文件名}可以展示该代码中每一个部分所占用的内存。
+
+\subsection{\small 感悟}
+
+熟练的使用彩色打印、第三方日志、调试器、静态分析工具、性能分析等方法和工具可以使我们的代码的编程更加遍历，也可以使代码更加简洁高效。
+
+\section{\large 元编程的练习内容、结果、感悟}
+\subsection{\small 构建系统}
+
+\includegraphics[width=12cm, height=0.5cm]{Pict (11)}
+
+\includegraphics[width=12cm, height=3cm]{Pict}
+
+建立一个\textbf{Makefile文件},所有构建目标、相关依赖和规则都需要在该文件中定义。图中代码是要用foo.dat和plot.py作为依赖构建一个plot-foo.png的图片。
+
+\subsection{\small 依赖文件的创建}
+\includegraphics[width=12cm, height=4cm]{Pict (12)}
+
+根据target创建系统所需要的plot.py和data.dat文件，最后用\textbf{make}根据系统构建目标构建plot-foo.png图片。
+
+\subsection{\small 感悟}
+
+使用make构建系统可以帮助我们快熟的编译出我们所想要的文件，学会使用构建系统、代码测试、依赖管理可以帮助我们更好的处理大型的代码库。
+\section{\large PyTorch的练习内容、结果、感悟}
+\subsection{\small 张量的初始化}
+\includegraphics[width=12cm, height=2cm]{Pict (13)}
+
+使用\textbf{data=[[1,2][3,4]]  x-data=torch.tensor(data)}可以直接从数据创建初始化张量。
+\subsection{\small 从另一个张量初始化}
+
+\includegraphics[width=12cm, height=5cm]{Pict (14)}
+
+除非显式覆盖，否则新张量将保留参数张量的属性（形状、数据类型）
+\subsection{\small 张量属性展示}
+
+\includegraphics[width=12cm, height=5.5cm]{Pict (15)}
+
+使用张量名+\textbf{.shape\.dtype\.device}等获得张量的形状、数据类型、存储设备。
+\subsection{\small 张量运算}
+
+\includegraphics[width=12cm, height=9cm]{Pict (16)}
+
+张量有超过100种张量操作，默认情况下，张量是在 CPU上创建的。我们需要使用 .to 方法将张量显式移动到GPU。
+\subsection{\small 加载数据集}
+
+\includegraphics[width=12cm, height=6cm]{Pict1}
+
+将参数传入，这将在我们的数据集周围包装一个可迭代对象，并支持自动批处理、采样、洗牌和多进程数据加载。
+
+\subsection{\small 创建模型}
+\includegraphics[width=12cm, height=5cm]{Pict20}
+
+经过多次训练使打印模型的准确性逐渐增加、损失减少。
+\subsection{\small 加载模型}
+\includegraphics[width=12cm, height=5cm]{Pict21}
+
+加载模型的过程包括重新创建模型结构并将状态字典加载到其中，可以用于预测。
+\end{document}
